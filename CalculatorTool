@@ -1,0 +1,215 @@
+script.Parent.CalculatorButton.MouseButton1Click:Connect() function
+     script.Parent.ExitMenu.Enabled = true 
+     
+     script.Parent.ExitMenu.MouseButton1Click:Connect function
+          script.Parent.Calculator.Active = false
+     end
+     
+     script.Parent.Calculator.Active = true
+     
+     
+     
+     local calculator = script.Parent.Calculator
+
+     local 1 = script.Parent.Calculator.Buttons.ScreenGUI.Frame.1
+     
+     local 2 = script.Parent.Calculator.Buttons.ScreenGUI.Frame.2
+
+     local 3 = script.Parent.Calculator.Buttons.ScreenGUI.Frame.3
+
+     local 4 = script.Parent.Calculator.Buttons.ScreenGUI.Frame.4
+
+     local 5 = script.Parent.Calculator.Buttons.ScreenGUI.Frame.5
+
+     local 6 = script.Parent.Calculator.Buttons.ScreenGUI.Frame.6
+
+     local 7 = script.Parent.Calculator.Buttons.ScreenGUI.Frame.7
+
+     local 8 = script.Parent.Calculator.Buttons.ScreenGUI.Frame.8
+
+     local 9 = script.Parent.Calculator.Buttons.ScreenGUI.Frame.9
+
+     local 0 = script.Parent.Calculator.Buttons.ScreenGUI.Frame.0
+
+
+     1.MouseClick:Connect() function
+          if calculator.Values.asdm.value == "none"
+               if calculator.Values.Integer1.value == "none" then
+                    calculator.Values.Integer1.value = calculator.Values.Integer1.value"1"
+               end
+          else
+               if calculator.Values.Integer2.value == "none" then
+                    calculator.Values.Integer2.value = calculator.Values.Integer1.value"1"
+               end
+          end
+     end
+
+     2.MouseClick:Connect() function
+          if calculator.Values.asdm.value == "none"
+               if calculator.Values.Integer1.value == "none" then
+                    calculator.Values.Integer1.value = calculator.Values.Integer1.value"2"
+               end
+          else
+               if calculator.Values.Integer2.value == "none" then
+                    calculator.Values.Integer2.value = calculator.Values.Integer1.value"2"
+               end
+          end
+     end
+
+     3.MouseClick:Connect() function
+          if calculator.Values.asdm.value == "none"
+               if calculator.Values.Integer1.value == "none" then
+                    calculator.Values.Integer1.value = calculator.Values.Integer1.value"3"
+               end
+          else
+               if calculator.Values.Integer2.value == "none" then
+                    calculator.Values.Integer2.value = calculator.Values.Integer1.value"3"
+               end
+          end
+     end
+
+     4.MouseClick:Connect() function
+          if calculator.Values.asdm.value == "none"
+               if calculator.Values.Integer1.value == "none" then
+                    calculator.Values.Integer1.value = calculator.Values.Integer1.value"4"
+               end
+          else
+               if calculator.Values.Integer2.value == "none" then
+                    calculator.Values.Integer2.value = calculator.Values.Integer1.value"4"
+               end
+          end
+     end
+
+     5.MouseClick:Connect() function
+          if calculator.Values.asdm.value == "none"
+               if calculator.Values.Integer1.value == "none" then
+                    calculator.Values.Integer1.value = calculator.Values.Integer1.value"5"
+               end
+          else
+               if calculator.Values.Integer2.value == "none" then
+                    calculator.Values.Integer2.value = calculator.Values.Integer1.value"5"
+               end
+          end
+     end
+
+     6.MouseClick:Connect() function
+          if calculator.Values.asdm.value == "none"
+               if calculator.Values.Integer1.value == "none" then
+                    calculator.Values.Integer1.value = calculator.Values.Integer1.value"6"
+               end
+          else
+               if calculator.Values.Integer2.value == "none" then
+                    calculator.Values.Integer2.value = calculator.Values.Integer1.value"6"
+               end
+          end
+     end
+
+     7.MouseClick:Connect() function
+          if calculator.Values.asdm.value == "none"
+               if calculator.Values.Integer1.value == "none" then
+                    calculator.Values.Integer1.value = calculator.Values.Integer1.value"7"
+               end
+          else
+               if calculator.Values.Integer2.value == "none" then
+                    calculator.Values.Integer2.value = calculator.Values.Integer1.value"7"
+               end
+          end
+     end
+
+     8.MouseClick:Connect() function
+          if calculator.Values.asdm.value == "none"
+               if calculator.Values.Integer1.value == "none" then
+                    calculator.Values.Integer1.value = calculator.Values.Integer1.value"8"
+               end
+          else
+               if calculator.Values.Integer2.value == "none" then
+                    calculator.Values.Integer2.value = calculator.Values.Integer1.value"8"
+               end
+          end
+     end
+
+     9.MouseClick:Connect() function
+          if calculator.Values.asdm.value == "none"
+               if calculator.Values.Integer1.value == "none" then
+                    calculator.Values.Integer1.value = calculator.Values.Integer1.value"9"
+               end
+          else
+               if calculator.Values.Integer2.value == "none" then
+                    calculator.Values.Integer2.value = calculator.Values.Integer1.value"9"
+               end
+          end
+     end
+
+     0.MouseClick:Connect() function
+          if calculator.Values.asdm.value == "none"
+               if calculator.Values.Integer1.value == "none" then
+                    calculator.Values.Integer1.value = calculator.Values.Integer1.value"0"
+               end
+          else
+               if calculator.Values.Integer2.value == "none" then
+                    calculator.Values.Integer2.value = calculator.Values.Integer1.value"1"
+               end
+          end
+     end
+
+     period.MouseClick:Connect() function
+          if calculator.Values.asdm.value == "none"
+               if calculator.Values.Integer1.value == "none" then
+                    calculator.Values.Integer1.value = calculator.Values.Integer1.value"."
+               end
+          else
+               if calculator.Values.Integer2.value == "none" then
+                    calculator.Values.Integer2.value = calculator.Values.Integer1.value"."
+               end
+          end
+     end
+
+     local add = script.Parent.Calculator.Buttons.ScreenGUI.Frame.add
+
+     local sub = script.Parent.Calculator.Buttons.ScreenGUI.Frame.sub
+
+     local mul = script.Parent.Calculator.Buttons.ScreenGUI.Frame.mul
+
+     local div = script.Parent.Calculator.Buttons.ScreenGUI.Frame.div
+
+
+     add.MouseClick:Connect() function
+          calculator.Values.asmd = "+"
+     end
+
+     sub.MouseClick:Connect() function
+          calculator.Values.asmd = "-"
+     end
+
+     mul.MouseClick:Connect() function
+          calculator.Values.asmd = "x"
+     end
+
+     div.MouseClick:Connect() function
+          calculator.Values.asmd = "÷"
+     end
+
+     local ent = calculator.Buttons.ScreenGUI.Frame.enter
+
+     ent.MouseClick:Connect() function
+          if calculator.Values.asmd == "+" then
+               calculator.Values.Answer.value = calculator.Values.Integer1.value + calculator.Values.Integer2.value
+          end
+     
+          if calculator.Values.asmd == "-" then
+               calculator.Values.Answer.value = calculator.Values.Integer1.value - calculator.Values.Integer2.value
+          end
+     
+          if calculator.Values.asmd == "x" then
+               calculator.Values.Answer.value = math(calculator.Values.Integer1.value(calculator.Values.Integer2.value))
+          end
+     
+          if calculator.Values.asmd == "÷" then
+               calculator.Values.Answer.value = math(calculator.Values.Integer1.value/calculator.Values.Integer2.value)
+          end
+     
+          if calculator.Values.asmd == "none" then
+               calculator.Values.Answer.value = calculator.Values.Integer1.value
+          end
+     end
+end
