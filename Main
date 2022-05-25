@@ -1,0 +1,315 @@
+local next = script.Parent.Name+1
+
+if script.Parent.Values.QuestionType == "MultipleChoice" then
+     
+     script.Parent.Tests.MultipleChoice.Active = true
+     
+     script.Parent.Tests.MultipleChoice.Question.text = script.Parent.QuestionValues.Question
+     
+     
+     script.Parent.Tests.MultipleChoice.Choice1.MouseButton1Click:Connect() function
+          
+          --VERSION 3.1 CHANGE START
+          
+          script.Parent.Tests.Confirm.Visible = true 
+          
+          script.Parent.Tests.Confirm.Yes.MouseButton1Click:Connect() function()
+          
+               if script.Parent.Answer == A then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    
+                    
+               else
+                    script.Parent.Parent.Values.IncorrectCount = script.Parent.Parent.Values.IncorrectCount + 1
+                    
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               end 
+          end
+          
+          script.Parent.Tests.Confirm.No.MouseButton1Click:Connect() function()
+                script.Parent.Tests.Confirm.Visible = false
+          end
+          
+          --VERSION 3.1 CHANGE END
+     end
+     
+     script.Parent.Tests.MultipleChoice.Choice2.MouseButton1Click:Connect() function
+          script.Parent.Tests.Confirm.Visible = true 
+          
+          script.Parent.Tests.Confirm.Yes.MouseButton1Click:Connect() function()
+          
+               if script.Parent.Answer == B then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               else
+                    script.Parent.Parent.Values.IncorrectCount = script.Parent.Parent.Values.IncorrectCount + 1
+                    
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               end 
+          end
+          
+          script.Parent.Tests.Confirm.No.MouseButton1Click:Connect() function()
+                script.Parent.Tests.Confirm.Visible = false
+          end
+     end
+
+     script.Parent.Tests.MultipleChoice.Choice3.MouseButton1Click:Connect() function
+          script.Parent.Tests.Confirm.Visible = true 
+          
+          script.Parent.Tests.Confirm.Yes.MouseButton1Click:Connect() function()
+          
+               if script.Parent.Answer == C then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               else
+                    script.Parent.Parent.Values.IncorrectCount = script.Parent.Parent.Values.IncorrectCount + 1
+                    
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               end 
+          end
+          
+          script.Parent.Tests.Confirm.No.MouseButton1Click:Connect() function()
+                script.Parent.Tests.Confirm.Visible = false
+          end
+     end
+     
+     script.Parent.Tests.MultipleChoice.Choice4.MouseButton1Click:Connect() function
+          script.Parent.Tests.Confirm.Visible = true 
+          
+          script.Parent.Tests.Confirm.Yes.MouseButton1Click:Connect() function()
+          
+               if script.Parent.Answer == D then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               else
+                    script.Parent.Parent.Values.IncorrectCount = script.Parent.Parent.Values.IncorrectCount + 1
+                    
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               end 
+          end
+          
+          script.Parent.Tests.Confirm.No.MouseButton1Click:Connect() function()
+                script.Parent.Tests.Confirm.Visible = false
+          end
+     end
+end
+
+if script.Parent.Values.QuestionType == "ShortAnswer" then
+     script.Parent.Tests.ShortAnswer.Active = true
+     
+     script.Parent.Tests.ShortAnswer.Question.text = script.Parent.QuestionValues.Question
+     
+     script.Parent.Tests.ShortAnswer.Enter.MouseButton1Click:Connect function()
+          script.Parent.Tests.ShortAnswer.Confirm.Enabled = true
+          
+          script.Parent.Tests.ShortAnswer.Confirm.Yes.MouseButton1Click:Connect function()
+          
+               --VERSION 4.0 START
+              
+               if script.Parent.Answer == script.Parent.Tests.ShortAnswer.AnswerBox.Text then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               elseif script.Parent.Answer2 == script.Parent.Tests.ShortAnswer.AnswerBox.Text then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               elseif script.Parent.Answer3 == script.Parent.Tests.ShortAnswer.AnswerBox.Text then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               elseif script.Parent.Answer4 == script.Parent.Tests.ShortAnswer.AnswerBox.Text then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               elseif script.Parent.Answer5 == script.Parent.Tests.ShortAnswer.AnswerBox.Text then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               elseif script.Parent.Answer6 == script.Parent.Tests.ShortAnswer.AnswerBox.Text then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               elseif script.Parent.Answer7 == script.Parent.Tests.ShortAnswer.AnswerBox.Text then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               elseif script.Parent.Answer8 == script.Parent.Tests.ShortAnswer.AnswerBox.Text then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               elseif script.Parent.Answer9 == script.Parent.Tests.ShortAnswer.AnswerBox.Text then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               elseif script.Parent.Answer10 == script.Parent.Tests.ShortAnswer.AnswerBox.Text then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               elseif script.Parent.Answer11 == script.Parent.Tests.ShortAnswer.AnswerBox.Text then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               elseif script.Parent.Answer12 == script.Parent.Tests.ShortAnswer.AnswerBox.Text then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               elseif script.Parent.Answer13 == script.Parent.Tests.ShortAnswer.AnswerBox.Text then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               elseif script.Parent.Answer14 == script.Parent.Tests.ShortAnswer.AnswerBox.Text then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               elseif script.Parent.Answer15 == script.Parent.Tests.ShortAnswer.AnswerBox.Text then
+                    script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               else
+                    script.Parent.Parent.NeedsChecking.Text = script.Parent.Parent.NeedsChecking.Text","script.Parent.Name":"script.Parent.Tests.ShortAnswer.Text
+                    
+                    script.Parent.Enabled = false 
+                    
+                    game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+               end
+               
+               --VERSION 4.0 END
+          end
+     end
+end
+
+if script.Parent.Values.QuestionType == "NumberAnswer" then
+     script.Parent.Tests.NumberAnswer.Active = true
+     
+     script.Parent.Tests.NumberAnswer.Question.text = script.Parent.QuestionValues.Question
+     
+     script.Parent.Tests.NumberAnswer.Choice1.MouseButton1Click:Connect() function
+          script.Parent.Tests.NumberAnswer.Confirm.Enabled = true
+          
+               script.Parent.Tests.NumberAnswer.Confirm.Yes.MouseButton1Click:Connect function()
+                    if script.Parent.Answer == script.Parent.Tests.NumberAnswer.AnswerBox.Text then
+                         script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    elseif script.Parent.Answer2 == script.Parent.Tests.NumberAnswer.AnswerBox.Text then
+                         script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    elseif script.Parent.Answer3 == script.Parent.Tests.NumberAnswer.AnswerBox.Text then
+                         script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    elseif script.Parent.Answer4 == script.Parent.Tests.NumberAnswer.AnswerBox.Text then
+                         script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    elseif script.Parent.Answer5 == script.Parent.Tests.NumberAnswer.AnswerBox.Text then
+                         script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    elseif script.Parent.Answer6 == script.Parent.Tests.NumberAnswer.AnswerBox.Text then
+                         script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    elseif script.Parent.Answer7 == script.Parent.Tests.NumberAnswer.AnswerBox.Text then
+                         script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    elseif script.Parent.Answer8 == script.Parent.Tests.NumberAnswer.AnswerBox.Text then
+                         script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    elseif script.Parent.Answer9 == script.Parent.Tests.NumberAnswer.AnswerBox.Text then
+                         script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    elseif script.Parent.Answer10 == script.Parent.Tests.NumberAnswer.AnswerBox.Text then
+                         script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    elseif script.Parent.Answer11 == script.Parent.Tests.NumberAnswer.AnswerBox.Text then
+                         script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    elseif script.Parent.Answer12 == script.Parent.Tests.NumberAnswer.AnswerBox.Text then
+                         script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    elseif script.Parent.Answer13 == script.Parent.Tests.NumberAnswer.AnswerBox.Text then
+                         script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    elseif script.Parent.Answer14 == script.Parent.Tests.NumberAnswer.AnswerBox.Text then
+                         script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    elseif script.Parent.Answer15 == script.Parent.Tests.NumberAnswer.AnswerBox.Text then
+                         script.Parent.Parent.Values.CorrectCount = script.Parent.Parent.Values.CorrectCount + 1
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    else
+                         script.Parent.Parent.NeedsChecking.Text = script.Parent.Parent.NeedsChecking.Text","script.Parent.Name":"script.Parent.Tests.NumberAnswer.Text
+                         script.Parent.Enabled = false 
+                    
+                         game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.next.Enabled = true
+                    end
+               end
+          end
+     end
+end
+
+
+if script.Parent.Values.QuestionType == "Custom" then
+     Server:FireEvent(script.Parent.Tests.Custom.FIRED)
+end
