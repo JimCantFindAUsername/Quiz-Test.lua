@@ -1,0 +1,29 @@
+script.Parent.ZoomIn.MouseButton1Click:Connect() function
+
+     script.Parent.ZoomIn.ZoomButton.Active = true
+     
+     script.Parent.ExitMenu.Enabled = true 
+     
+     script.Parent.ExitMenu.MouseButton1Click:Connect function
+          script.Parent.ZoomIn.Active = false
+     end
+     
+     script.Parent.ZoomIn.ZoomButton.MouseButton1Click:Connect() function
+          script.Parent.Size = script.Parent.Size + Vector2.new(200, 200)     
+     end
+end
+
+
+script.Parent.ZoomOut.MouseButton1Click:Connect() function
+
+     
+     script.Parent.ExitMenu.Enabled = true 
+     
+     script.Parent.ExitMenu.MouseButton1Click:Connect function
+          script.Parent.ZoomOut.Active = false
+     end
+     
+     script.Parent.ZoomIn.ZoomButton.MouseButton1Click:Connect() function
+          script.Parent.Size = script.Parent.Size + Vector2.new(-200, -200)     
+     end
+end
