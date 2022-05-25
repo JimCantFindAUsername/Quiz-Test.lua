@@ -1,0 +1,21 @@
+script.Parent.LineGuide.MouseButton1Click:Connect() function
+     plr.Click:Connect(e) function
+          local Line = Instance.new("ImageLabel")
+          
+          Spot.DecalID = 
+          
+          if plr.Cursor.Position == Line.Position then
+               Line:Delete
+          else
+               
+               local LineElse = Line:Duplicate
+                    
+               LineElse.Position = plr.Cursor
+               
+               LineElse.Size = plr.Click.Position - LineElse.Position
+               
+               LineElse.Rotation = plr.Click.Rotation - LineElse.Rotation
+          end
+     end
+end
+
