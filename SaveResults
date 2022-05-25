@@ -1,0 +1,13 @@
+if game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI:WaitForChild(next):NotFound then
+     local right = game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.CorrectCount.value
+     local wrong = game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name).PlayerGUI.IncorrectCount.Value
+     
+     game.ServerStorage.Values.Average.Value = right + wrong
+     
+     game.ServerStorage.Values.Average.Value = game.ServerStorage.Values.Average.Value/2
+     
+     WEBSITE.text =  game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name) game.ServerStorage.Values.Average.Value
+     wait(0.001)
+     
+     game.Players:WaitForChild(game.Workspace:WaitForChild(Model).Name):Kick("You finished the quiz.")  
+end
