@@ -1,0 +1,19 @@
+script.Parent.HighlighterButton.MouseButton1Click:Connect() function
+     script.Parent.HighlighterCursor.Enabled = true 
+     
+     plr.Click:Connect() function
+          local Spot = Instance.new("ImageLabel")
+          
+          Spot.DecalID = 
+          
+          plr.MouseMove:Connect() function
+               if plr.Cursor.Position == Spot.Position then
+                    Spot:Delete
+               else
+                    local SpotElse = Spot:Duplicate
+                    
+                    SpotElse.Position = plr.Cursor
+               end
+          end
+     end
+end
